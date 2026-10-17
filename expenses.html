@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All expenses | Spendly</title><link rel="stylesheet" href="expenses.css"></head>
+<body><header class="top"><b>Spendly</b><nav><a href="dashboard.html">Dashboard</a><a href="add.html">Add expense</a><a href="expenses.html" class="on">All expenses</a><a href="budget.html">Budget and reports</a></nav><button id="logout">Log out</button></header>
+<main class="page">
+<h1>All expenses</h1><p class="sub">Search, filter, delete, or export your records.</p>
+<div class="filters">
+<label>Search<input id="q" placeholder="Title or note"></label>
+<label>Category<select id="cat"><option value="">All categories</option></select></label>
+<label>Month<input id="month" type="month"></label>
+<button id="csv">Export CSV</button></div>
+<p class="total" id="total"></p>
+<div class="card wrap"><table class="tbl"><thead><tr><th>Date</th><th>Title</th><th>Category</th><th class="amt">Amount</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+</main>
+<script src="expenses.js"></script></body></html>

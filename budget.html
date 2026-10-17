@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Budget and reports | Spendly</title><link rel="stylesheet" href="budget.css"></head>
+<body><header class="top"><b>Spendly</b><nav><a href="dashboard.html">Dashboard</a><a href="add.html">Add expense</a><a href="expenses.html">All expenses</a><a href="budget.html" class="on">Budget and reports</a></nav><button id="logout">Log out</button></header>
+<main class="page">
+<h1>Budget and reports</h1><p class="sub">Set a monthly limit and see how you are doing.</p>
+<form class="set" id="form"><label>Monthly budget (₹)<input id="amount" type="number" min="1" required></label><button>Save budget</button></form>
+<p class="msg" id="msg" role="alert"></p>
+<div class="card"><h3>This month</h3><p class="big" id="status"></p><div class="bar" id="bar"><i style="width:0"></i></div><p class="sub" id="tip" style="margin:10px 0 0"></p></div>
+<div class="card"><h3>Last 6 months</h3><div class="trend" id="trend"></div></div>
+</main>
+<script src="budget.js"></script></body></html>

@@ -1,0 +1,9 @@
+@import url("register.css");
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:20px}
+.stats .card span{color:var(--mut);font-size:.9rem}
+.stats .card strong{display:block;font:700 1.9rem Sora,sans-serif;margin-top:4px}
+.neg{color:var(--bad)}.pos{color:var(--go)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cat{display:grid;grid-template-columns:110px 1fr 80px;gap:10px;align-items:center;margin:12px 0}
+.cat em{font-style:normal;font-weight:600;text-align:right}
+@media(max-width:800px){.two{grid-template-columns:1fr}}

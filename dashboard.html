@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard | Spendly</title><link rel="stylesheet" href="dashboard.css"></head>
+<body><header class="top"><b>Spendly</b><nav><a href="dashboard.html" class="on">Dashboard</a><a href="add.html">Add expense</a><a href="expenses.html">All expenses</a><a href="budget.html">Budget and reports</a></nav><button id="logout">Log out</button></header>
+<main class="page">
+<h1 id="hello">Welcome</h1><p class="sub" id="month"></p>
+<div class="stats">
+<div class="card"><span>Spent this month</span><strong id="spent">0</strong></div>
+<div class="card"><span>Monthly budget</span><strong id="budget">Not set</strong></div>
+<div class="card"><span>Left to spend</span><strong id="left">-</strong></div>
+<div class="card"><span>Expenses logged</span><strong id="count">0</strong></div></div>
+<div class="two"><div class="card"><h3>Spending by category</h3><div id="cats"></div></div>
+<div class="card"><h3>Recent expenses</h3><table class="tbl"><tbody id="recent"></tbody></table></div></div>
+</main>
+<script src="dashboard.js"></script></body></html>

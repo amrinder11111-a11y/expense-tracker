@@ -1,0 +1,20 @@
+const $=id=>document.getElementById(id), get=k=>JSON.parse(localStorage.getItem(k)||'null');
+const me=get('session');if(!me)location.href='login.html';
+$('logout').onclick=()=>{localStorage.removeItem('session');location.href='login.html'};
+const CATS=['Food','Travel','Bills','Shopping','Health','Education','Entertainment','Other'];
+CATS.forEach(c=>$('cat').add(new Option(c,c)));
+const today=new Date().toISOString().slice(0,10);
+$('date').value=today;$('date').max=today;
+$('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const title=$('title').value.trim(),amount=parseFloat($('amount').value),date=$('date').value;
+  const err=m=>{$('msg').className='msg';$('msg').textContent=m};
+  if(!title)return err('Enter what you bought.');
+  if(!(amount>0))return err('Enter an amount greater than 0.');
+  if(!date||date>today)return err('Choose a date that is today or earlier.');
+  const all=get('exp')||[];
+  all.push({id:Date.now(),email:me.email,title,amount,date,cat:$('cat').value,note:$('note').value.trim()});
+  localStorage.setItem('exp',JSON.stringify(all));
+  $('msg').className='msg ok';$('msg').textContent='Expense saved.';
+  $('title').value='';$('amount').value='';$('note').value='';$('title').focus();
+});
